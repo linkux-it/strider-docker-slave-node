@@ -1,13 +1,14 @@
 # DOCKER-VERSION 1.0.0
+# Based on https://github.com/Strider-CD/strider-docker-slave
 
-FROM ubuntu:14.04
+FROM ubuntu:15.10
 
-MAINTAINER Keyvan Fatehi <keyvanfatehi@gmail.com>
+MAINTAINER Luis Carlos Cruz <lcruzc@linkux-it.com>
 
 RUN apt-get -y update
 
 # Node.js and Git are required
-RUN apt-get -y install nodejs npm git
+RUN apt-get -y install nodejs npm git curl wget
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 # git wants this
@@ -42,3 +43,5 @@ ENV HOME /home/strider
 # - default-jre-headless
 # - ruby
 
+RUN npm install n -g
+RUN npm install bower -g

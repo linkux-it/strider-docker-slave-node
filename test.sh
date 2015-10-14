@@ -11,6 +11,6 @@ EOF
 docker run \
   -i -a stdout \
   --name testing-strider-docker-slave \
-  keyvanfatehi/strider-docker-slave SpawnJSON.js < test.json
+  lcruzc/strider-docker-slave-node SpawnJSON.js < test.json
 
 docker rm testing-strider-docker-slave 2>&1 > /dev/null

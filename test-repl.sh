@@ -6,6 +6,6 @@ docker run \
   -a stdin \
   -it --rm \
   --name testing-strider-docker-slave \
-  keyvanfatehi/strider-docker-slave StriderSlave
+  lcruzc/strider-docker-slave-node strider-docker-slave
 
 docker rm -f testing-strider-docker-slave 2>&1 > /dev/null

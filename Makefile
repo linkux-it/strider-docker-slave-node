@@ -1,16 +1,16 @@
 rmi:
-	docker rmi keyvanfatehi/strider-docker-slave 2>&1 > /dev/null
+	docker rmi lcruzc/strider-docker-slave-node 2>&1 > /dev/null
 
 build:
-	sudo docker build -t keyvanfatehi/strider-docker-slave .
+	docker build -t lcruzc/strider-docker-slave-node .
 
 test: build
-	sudo bash ./test.sh
+	bash ./test.sh
 
 test-repl: build
-	sudo bash test-repl.sh
+	bash test-repl.sh
 
 publish:
-	docker push keyvanfatehi/strider-docker-slave
+	docker push lcruzc/strider-docker-slave-node
 
 .PHONY: test-repl
