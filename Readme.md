@@ -1,4 +1,4 @@
-# Strider Docker Slave
+# Strider Docker Slave Node
 
 This repo describes the base docker image for running strider jobs.
 
