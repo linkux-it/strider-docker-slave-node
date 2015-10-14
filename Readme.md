@@ -4,6 +4,7 @@ This repo describes the base docker image for running strider jobs.
 
 To test the slave,
 
+
 ```bash
 ./slave.js < lots.json
 ```
